@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Menu superion-->
     <div class="toggle" onclick="toggleMenu();"></div>
 
     <section class="banner" id="home">
@@ -22,30 +23,100 @@
                 <h4>Sou um Desenvolvedor Web.</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil laborum quas accusamus reiciendis dicta, repellat voluptates aut accusantium ut inventore expedita tenetur rerum nostrum sapiente. Ipsum voluptatum neque facilis ex.
                 Accusamus, consectetur incidunt. Saepe sapiente repudiandae harum suscipit quasi laboriosam iusto, aut molestiae enim culpa porro sed quae iure.</p>
-                <a href="*" class="btn">Sobre mim</a>
+                <a href="#about" class="btn">Sobre mim</a>
             </div>
+            <!--Imagens para contato linkedin, github, etc-->
             <ul class="sci">
                 <li><a href="#"><img src="images/in.png"></a></li>
                 <li><a href="#"><img src="images/github.png"></a></li>
                 <li><a href="#"><img src="images/inst.png"></a></li>
             </ul>
-        </div>
-        
+        </div>   
     </section>
+
+    <!--Sessão Sobre-->
+    <section class="about" id="about">
+        <div class="title white">
+            <h2>Sobre mim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="textBx">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus amet in voluptatem cupiditate voluptatibus dignissimos rem perspiciatis. Nulla tempore rerum quasi voluptates quos quod eveniet consequuntur! Magnam, fugit excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa enim quisquam magnam at libero voluptate recusandae eveniet labore architecto dolore consequatur accusantium doloremque fugiat veniam perferendis ab eum, quos maxime!<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe dicta quia natus odio atque aspernatur quam ex quod nemo fugit officiis amet, neque quidem? Ratione repudiandae rerum perferendis accusantium numquam.></p>
+            </div>
+            <!--Imagem pessoal da pagina sobre-->
+            <div class="imgBx">
+                <img src="images/pp.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!--Sessão de habilidades-->
+    <section class="skills" id="skills">
+         <h2 class="title">Minhas Habilidades</h2>
+            <div class="skills-content">
+                <div class="column left">
+                    <div class="text">Minhas Habilidades & Experiências</div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia officia, et provident soluta facere, cum non, nihil molestias quas eveniet natus assumenda similique optio. Officia cumque quasi sit ex nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nam aliquam possimus laboriosam enim animi, delectus voluptas est ullam sed deleniti dolorum voluptates dolorem tempore nobis. Cupiditate quas possimus. </p>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div>
+                            <p></p>
+                        </div>
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>25%</span>
+                            <div class="line html"></div>
+                        </div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>25%</span>
+                            <div class="line css"></div>
+                        </div>
+                    </div>
+                    <div class="bars">   
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>25%</span>
+                            <div class="line js"></div>
+                        </div>
+                    </div> 
+                    <div class="bars">  
+                        <div class="info">
+                            <span>MySQL</span>
+                            <span>25%</span>
+                            <div class="line sql"></div>
+                        </div>
+                    </div>
+                    <div class="bars"> 
+                        <div class="info">
+                            <span>Java</span>
+                            <span>25%</span>
+                            <div class="line java"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
     
+    <!--Opções do menu -->
     <div class="sidebar">
         <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="#home" onclick="toggleMenu();">Início</a></li>
+            <li><a href="#about" onclick="toggleMenu();">Sobre</a></li>
             <li><a href="#">Habilidades</a></li>
             <li><a href="#">Projetos</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
     </div>
     
-    
+    <!---Javascript -->
     <script>
-        //arrumando menu
+        //O propósito dessa função é interagir com o menu superior, ou seja, quando clicarem nele ocorrerá uma ação
         function toggleMenu(){
             const menuToggle = document.querySelector('.toggle');
             const sidebar = document.querySelector('.sidebar');
