@@ -231,6 +231,7 @@ p
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    text-align: justify;
 }
 .about .content .textBx
 {
@@ -248,8 +249,9 @@ p
 .about .content .imgBx img
 {
     max-width: 100%;
+    border-radius: 1%;
 }
-/* SKILLS---------------*/
+/* ----------SKILLS---------------*/
 .skills 
 {
     background-color: #fff;
@@ -268,10 +270,29 @@ p
 .skills .skills-content .left .text
 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 10px;
 }
-.skills .skills-content .column .bars
+.skills .skills-content .left p
+{
+    text-align: justify;
+}
+/*
+.skills .skills-content .left a
+{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+*/
+.skills .skills-content .right .bars
 {   
     margin-bottom: 15px;   
 }
@@ -283,12 +304,43 @@ p
 }
 .skills .skills-content .right span
 {
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 18px;
 }
-.skills .skills-content .right line
+.skills .skills-content .right .line
 {
     height: 5px;
     width: 100%;
-    background: lightgrey;
+    background: lightgray;
+    position: relative;
+}
+.skills .skills-content .right .line::before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background:crimson;
+}
+/*-----HABILIDADES PORCENTAGEM------- */
+.skills-content .right .html::before
+{
+    width: 30%;
+}
+.skills-content .right .css::before
+{
+    width: 35%;
+}
+.skills-content .right .js::before
+{
+    width: 20%;
+}
+.skills-content .right .sql::before
+{
+    width: 30%;
+}
+.skills-content .right .java::before
+{
+    width: 25%;
 }
