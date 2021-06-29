@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
+/*Organizando o menu superior direito*/
 .toggle
 {
     position: fixed;
@@ -29,6 +29,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+/*pagina inicial*/
 section
 {
     padding: 100px;
@@ -115,6 +116,11 @@ p
     font-weight: 500;
     letter-spacing: 2px;
 }
+.btn:hover
+{
+    background: #333;
+    transition-duration: 0.5s;
+}
 .sidebar
 {
     position: fixed;
@@ -178,17 +184,17 @@ p
 }
 .sci li img:hover
 {
-    transform: scale(1);
+    transform: scale(0.8);
     transition: 0.3s;
     opacity: 1;
 }
-/* SOBRE ----------*/
+/* ------SOBRE ----------*/
 .title
 {
     width: 100%;
     text-align: center;
 }
-.title h2, .skills h2
+.title h2
 {
     position: relative;
     color:#00bcd4;
@@ -226,7 +232,7 @@ p
 {
     background: #000;
 }
-.about .content
+.about .content, .skills .skills-content
 {
     display: flex;
     justify-content: space-between;
@@ -249,20 +255,8 @@ p
 .about .content .imgBx img
 {
     max-width: 100%;
-    border-radius: 1%;
 }
 /* ----------SKILLS---------------*/
-.skills 
-{
-    background-color: #fff;
-}
-.skills .skills-content
-{  
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
 .skills .skills-content .column
 { 
     width: calc(50% - 30px);
@@ -270,13 +264,29 @@ p
 .skills .skills-content .left .text
 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 10px;
+    color: #333;
 }
-.skills .skills-content .left p
+/*------Habilidades ----e-----Experiencia-----*/
+.skills .skills-content .left .hab
 {
-    text-align: justify;
+    font-weight: bolder;
+    font-size: 30px;
 }
+.skills .skills-content .left .exp
+{
+    font-weight: bolder;
+    font-size: 30px;   
+}
+.skills .skills-content .left .simbol
+{
+    color: #00bcd4;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+/*----------ends here--------------------*/
+
 /*
 .skills .skills-content .left a
 {
@@ -311,7 +321,7 @@ p
 {
     height: 5px;
     width: 100%;
-    background: lightgray;
+    background: #333;
     position: relative;
 }
 .skills .skills-content .right .line::before
@@ -321,7 +331,7 @@ p
     height: 100%;
     left: 0;
     top: 0;
-    background:crimson;
+    background:#00bcd4;
 }
 /*-----HABILIDADES PORCENTAGEM------- */
 .skills-content .right .html::before
@@ -343,4 +353,158 @@ p
 .skills-content .right .java::before
 {
     width: 25%;
+}
+/*------------Contatos---------*/
+.contact
+{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .contactForm
+{
+    position: relative;
+    width: 700px;
+    margin-top: 20px;
+}
+.contact .contactForm .row
+{
+    width: 100%;
+    display: flex;
+}
+.contact .contactForm .row .col50
+{
+    width: 50%;
+    margin: 10px;
+}
+.contact .contactForm .row .col100
+{
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+.contact .contactForm .row input,
+.contact .contactForm .row textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    resize: none;
+}
+.contact .contactForm .row textarea
+{
+    height: 100px;
+}
+.contact .contactForm .row input[type="submit"]
+{
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 150px;
+}
+.contact .contactForm .row input[type="submit"]:hover
+{
+    background: #333;
+    transition-duration: 0.5s;
+}
+
+
+/*Corrigindo a exibição em telas menores*/
+@media (max-width: 991px)
+{
+    .banner .imgSidebar
+    {
+        display: none;
+    }
+    .banner .contentBox .sidebar
+    {  
+        width: 50%;
+        padding: 40px;
+    }
+    .sidebar.active{
+        width: max-content;
+    }
+    .logoText
+    {
+        left:20px;
+        top: 5px;
+    }
+    .banner 
+    {
+        right: 5px;
+    }
+    .sci
+    {
+        left: 50%;
+        bottom: 0;
+    }
+    section
+    {
+        padding: 30px;
+    }
+    .about .content
+    {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .about .content .textBx
+    {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .banner .contentBox, .sidebar
+    {
+        display: flex;
+        padding: 10px;
+        width: auto;
+        text-align: justify;
+    }
+    
+    .about .content .imgBx
+    {
+        margin-left: 0;
+    }
+    .skills-content {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: justify;
+    }
+    .skills .skills-content
+    {
+        justify-content: center;
+    }
+    .skills .skills-content .column
+    {
+        width: auto;
+    }
+    .contact .contactForm
+    {
+        width: 100%;
+    }
+    .contactForm .row
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact .contactForm .row .col50
+    {
+        width: 100%;
+    }
+    .sidebar ul li a
+    {
+        font-size: 1.5em;
+    }
 }

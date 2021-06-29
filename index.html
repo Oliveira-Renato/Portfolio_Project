@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Menu superion-->
+    <!--Menu superior do canto direito-->
     <div class="toggle" onclick="toggleMenu();"></div>
-
+    <!--pagina inicial-->
     <section class="banner" id="home">
         <div class="imgSidebar">
             <img src="images/bg.jpg">
@@ -25,11 +25,11 @@
                 Accusamus, consectetur incidunt. Saepe sapiente repudiandae harum suscipit quasi laboriosam iusto, aut molestiae enim culpa porro sed quae iure.</p>
                 <a href="#about" class="btn">Sobre mim</a>
             </div>
-            <!--Imagens para contato linkedin, github, etc-->
+            <!--Imagens para contato linkedin, github, etc--> 
             <ul class="sci">
-                <li><a href="#"><img src="images/in.png"></a></li>
-                <li><a href="#"><img src="images/github.png"></a></li>
-                <li><a href="#"><img src="images/inst.png"></a></li>
+                <li><a href= "https://www.linkedin.com/in/renato-silva-de-oliveira-078b4719b/" target="blank"><img src="images/in.png"></a></li>
+                <li><a href="https://github.com/Oliveira-Renato" target="blank"><img src="images/github.png"></a></li>
+                <li><a href="https://www.instagram.com/renato.marvel/" target="blank"><img src="images/inst.png"></a></li>
             </ul>
         </div>   
     </section>
@@ -53,14 +53,19 @@
 
     <!--Sessão de habilidades-->
     <section class="skills" id="skills">
-         <h2 class="title">Minhas Habilidades</h2>
+        <div class="title">
+         <h2 >Minhas Habilidades</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </div>
             <div class="skills-content">
                 <div class="column left">
-                    <div class="text">Minhas Habilidades & Experiências</div>
+                    <div class="text">Minhas <span class="hab">Habilidades</span> <span class="simbol">&</span> <span class="exp">Experiências</span></div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia officia, et provident soluta facere, cum non, nihil molestias quas eveniet natus assumenda similique optio. Officia cumque quasi sit ex nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nam aliquam possimus laboriosam enim animi, delectus voluptas est ullam sed deleniti dolorum voluptates dolorem tempore nobis. Cupiditate quas possimus. </p>
                 </div>
+        <!--Habilidades e Experiencia | divs responsaveis pelas habilidades e niveis-->        
                 <div class="column right">
                     <div class="bars">
+                        <!--Chato ter que fazer isso :(-->
                         <div>
                             <p></p>
                         </div>
@@ -102,19 +107,54 @@
             </div>
     </section>
 
+    <!----------Formulario Contato---------->
+    <section class="contact" id="cantact">
+        <div class="title white">
+            <h2>Entre em Contato</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolores cumque voluptatum doloremque maxime quidem obcaecati, delectus minima soluta similique cupiditate porro debitis.</p>
+        </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Primeiro Nome">
+                    </div>
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Sobrenome">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Email">
+                    </div>
+                    <div class="col50">
+                        <input type="text" name="" placeholder="Assunto">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <textarea placeholder="Digite aqui..."></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
+    </section>
     
-    <!--Opções do menu -->
+    <!-----------Opções do menu ---------------------->
     <div class="sidebar">
         <ul class="menu">
             <li><a href="#home" onclick="toggleMenu();">Início</a></li>
             <li><a href="#about" onclick="toggleMenu();">Sobre</a></li>
             <li><a href="#skills" onclick="toggleMenu();">Habilidades</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#" onclick="toggleMenu();">Projetos</a></li>
+            <li><a href="#cantact" onclick="toggleMenu();">Contato</a></li>
         </ul>
     </div>
     
-    <!---Javascript -->
+    <!-------------Javascript ----------------->
     <script>
         //O propósito dessa função é interagir com o menu superior, ou seja, quando clicarem nele ocorrerá uma ação
         function toggleMenu(){
