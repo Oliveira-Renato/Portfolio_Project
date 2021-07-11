@@ -428,8 +428,8 @@ p
     }
     .banner .contentBox .sidebar
     {  
-        width: 50%;
-        padding: 40px;
+        width: max-content;
+        padding: 30px;
     }
     .sidebar.active{
         width: max-content;
@@ -437,7 +437,7 @@ p
     .logoText
     {
         left:20px;
-        top: 5px;
+        top: 20px;
     }
     .banner 
     {
@@ -466,9 +466,9 @@ p
     .banner .contentBox, .sidebar
     {
         display: flex;
-        padding: 10px;
         width: auto;
         text-align: justify;
+        padding: 30px;
     }
     
     .about .content .imgBx
@@ -506,5 +506,13 @@ p
     .sidebar ul li a
     {
         font-size: 1.5em;
+    }
+    .sidebar.active
+    {
+        width: 50%;
+    }
+    .skills .skills-content .left .text
+    {
+        text-align: center;
     }
 }
